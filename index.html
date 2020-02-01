@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+
+	<meta charset="utf-8">
+	<!-- <base href="/"> -->
+
+	<title>CodeJam - Draw Api</title>
+	<meta name="description" content="">
+
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	
+	<!-- Template Basic Images Start -->
+	<meta property="og:image" content="path/to/image.jpg">
+	<link rel="icon" href="img/favicon/favicon.min.png">
+	<link rel="apple-touch-icon" sizes="180x180" href="img/favicon/favicon.big.png">
+	<!-- Template Basic Images End -->
+	
+	<!-- Custom Browsers Color Start -->
+	<meta name="theme-color" content="#000">
+	<!-- Custom Browsers Color End -->
+
+	<link rel="stylesheet" href="css/main.min.css">
+
+</head>
+
+<body>
+
+	<!-- Custom HTML -->
+
+	<header class="my-header">
+
+		<div class="top-line">
+			<div class="container-fluid">
+				<div class="row align-items-center justify-content-start">
+
+					<div class="col-md-11 flex-container">
+						<nav class="nav-menu"><i class="fa fa-bars" aria-hidden="true"></i></nav>
+						<h3>CodeJam - Palette</h3>
+					</div>
+		
+					<div class="col-md-1 flex-container">
+						<div class="sign">
+							<i class="fa fa-ellipsis-v" aria-hidden="true"></i>
+						</div>
+					</div>	
+																				
+				</div>													
+			</div>
+		</div>
+
+	</header>
+
+	<main class="main-content flex-container">
+
+		<aside class="side-bar-left">
+			<div class="container-fluid">
+				<div class="row">					
+
+					<div class="col-md-12">
+						<div class="toolbar">
+							<ul class="toolbar-list">
+								<li class="toolbar-list-item" data-method = "fill">									
+									<i class="fa fa-tint" aria-hidden="true"></i>
+									<a href="#" class="link-tools">Paint bucket</a>
+								</li>
+								<li class="toolbar-list-item" data-method = "eyedropper">
+									<i class="fa fa-eyedropper" aria-hidden="true"></i>
+									<a href="#" class="link-tools">Choose color</a>
+									<input type="color" id="color">
+								</li>
+								<li class="toolbar-list-item current" data-method="pencil">
+									<i class="fa fa-pencil" aria-hidden="true"></i>
+									<a href="#" class="link-tools">Pencil</a>
+								</li>								
+								<li class="toolbar-list-item" data-method = "transform">
+									<i class="fa fa-exchange" aria-hidden="true"></i>
+									<a href="#" class="link-tools">Transform</a>
+								</li>							
+								<button class="btn-clear">Clear</button>																
+							</ul>
+						</div>
+					</div>
+
+					<div class="col-md-12">
+						<div class="palette">
+							<ul class="palette-list">
+								<li class="palette-list-item">
+									<span class="palette-color"></span>									
+									<a href="#">Curent color</a>									
+								</li>
+								<li class="palette-list-item">
+									<span class="palette-color"></span>									
+									<a href="#">Prev color</a>
+								</li>
+								<li class="palette-list-item">
+									<span class="palette-color"></span>									
+									<a href="#">red</a>
+								</li>
+								<li class="palette-list-item">
+									<span class="palette-color"></span>									
+									<a href="#">blue</a>
+								</li>
+							</ul>
+						</div>
+					</div>						
+
+				</div>								
+			</div>
+		</aside>
+		
+		<div class="draw-area">			
+			<div class="container-fluid">
+				<div class="row justify-content-center">
+
+					<div class="col-md-8 offset-md-4">
+						<div class="draw-tools">
+							<div class="left-tools">
+								<button class="btn-load">Load</button>
+								<input class="town" type="text" value = "" placeholder="Search the town ...">
+							</div>							
+							<button class="black-white">B&W</button>
+						</div>						
+						<div class="draw">							
+							<canvas id="canvas" width="512" height="512"></canvas>																			
+						</div>								
+					</div>
+
+				</div>
+			</div>
+		</div>
+
+		<aside class="side-bar-right">
+			<div class="container-fluid">
+				<div class="row">					
+
+					<div class="col-md-12">
+						<div class="toolbar">
+							<h4>Resolution</h4>
+							<ul class="toolbar-list">						
+								<li class="toolbar-list-item active">
+									<a href="#" class="link-matrix" matrix = "4">128 x 128</a>
+								</li>
+								<li class="toolbar-list-item">
+									<a href="#" class="link-matrix" matrix = "2">256 x 256</a>
+								</li>
+								<li class="toolbar-list-item">
+									<a href="#" class="link-matrix" matrix = "1">512 x 512</a>
+								</li>																					
+							</ul>														
+						</div>
+					</div>									
+
+				</div>								
+			</div>
+		</aside>	
+
+	</main>	
+
+	<script src="js/scripts.min.js"></script>
+</body>
+</html>

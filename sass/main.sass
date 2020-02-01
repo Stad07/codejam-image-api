@@ -1,0 +1,235 @@
+@import "vars"
+@import "fonts"
+@import "libs"
+
+*
+	box-sizing: border-box
+	&:after, &:before
+		box-sizing: border-box
+		display: block
+
+::placeholder
+	color: #777
+
+::selection
+	background-color: $accent
+	color: #fff
+
+body
+	font-size: 16px
+	min-width: 320px
+	position: relative
+	line-height: 1.65
+	font-family: $default-font
+	overflow-x: hidden
+	color: $text
+	input, textarea
+		border: #777 1px solid
+		outline: none
+		&:focus:required:invalid
+			border-color: red
+		&:required:valid
+			border-color: green
+
+.img-responsive
+	display: block
+	max-width: 100%
+	height: auto
+	&.img-width
+		width: 100%
+
+.text-center
+	text-align: center
+
+.hidden
+	display: none	
+
+b, strong
+	font-weight: bold
+
+h1, h2, h3, h4, h5, h6
+	margin: 0
+	padding: 0
+
+.flex-container
+	display: flex
+	align-items: center
+	align-items: flex-start	
+
+// .............................Custom Css........................... //
+
+.top-line
+	box-shadow: 1px 3px 6px #9D9D9D
+	padding: 7px 10px		
+
+.fa
+	display: inline-block
+	font-style: normal	
+	font-size: 1.1rem	
+	font-family: "font-awesome"
+	&.fa-bars
+		&::before			
+			content: "\f0c9"
+	&.fa-ellipsis-v
+		&::before			
+	    content: "\f142"		
+
+h3
+	margin-left: 50px
+
+.sign
+	flex-grow: 1 
+	text-align: right
+
+// ........................................<section main>..........................
+
+main
+	padding: 90px 30px 90px	
+
+.side-bar
+	&-right,
+	&-left
+		background-color: #fff
+		width: 15vw
+		.toolbar,
+		.palette
+			position: relative			
+			min-width: 228px
+			min-height: 246px
+			box-shadow: 1px 3px 6px #9D9D9D		
+			&:first-child
+				margin-bottom: 100px
+			&-list				
+				list-style-type: none
+				margin: 0
+				padding: 0
+				&-item
+					position: relative
+					padding-left: 15px
+					transition: all .2s ease
+					cursor: pointer					
+					a
+						display: inline-block
+						width: 85%
+						color: #7D7D7D
+						padding: 10px 0px 10px 30px
+						text-decoration: none																		
+					&:hover
+						background-color: #dedede	
+					&.active,
+					&.current
+						background-color: #dedede						
+		.palette			
+			&-list-item				
+				padding-left: 35px
+				span
+					width: 15px
+					height: 15px					
+					display: block
+					border: 1px solid black
+					border-radius: 50%
+					position: absolute
+					top: 16px
+					left: 15px
+				&:first-child
+					span
+						background-color: #000
+				&:nth-child(3)
+					span
+						background-color: #f53f45	
+				&:last-child
+					span
+						background-color: #48b6f5	
+	&-right
+		.toolbar h4
+			text-align: center
+			font-size: 1rem
+			text-transform: uppercase
+			padding: 5px 0px
+			border-bottom: 1px solid black
+		&-list-item
+				padding-left: 0
+				a
+					padding-left: 30px
+					display: inline-block
+					width: 100%
+
+.draw-area	
+	width: 85%
+	position: relative
+	.draw-tools
+		position: absolute
+		width: 512px
+		top: - 40px
+		display: flex
+		justify-content: space-between
+		
+		input
+			padding-left: 10px
+			height: 30px
+			border: none
+			box-shadow: 1px 1px 2px 1px #9D9D9D
+			margin-left: 15px
+		button		
+			border: none
+			background-color: #1CBCD3
+			color: #fff
+			padding: 2px 15px	
+
+
+.fa
+	display: inline-block	
+	min-width: 10%	
+	&.fa-exchange
+		&::before
+			content: "\f0ec"
+	&.fa-arrows
+		&::before
+			content: "\f047"
+	&.fa-eyedropper
+		&::before
+			content: "\f1fb"
+	&.fa-pencil
+		&::before
+			content: "\f040"			
+	&.fa-tint
+		text-align: center
+		&::before
+			content: "\f043"
+
+canvas
+	border: 1px solid rgba(0,0,0,.2)	
+	position: relative
+	
+.default-image
+	border: 1px solid rgba(0,0,0,0.2)
+	background-size: cover
+
+.btn-clear
+	display: block	
+	width: 100%
+	max-width: 170px
+	background-color: #fff
+	color: #010101
+	border: 1px solid #010101
+	margin: auto
+	transition: all 0.5s ease
+	position: absolute
+	bottom: 15px
+	left: 30px
+	outline: none
+	&:hover
+		background-color: #010101		
+		color: #fff
+
+#color
+	visibility: visible
+	position: absolute
+	right: 5px
+	top: 12px
+
+
+
+// .................................................	
+
+@import "media" // Always at the end
